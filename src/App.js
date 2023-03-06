@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Box } from "@mui/material";
 
 import {
@@ -12,7 +12,7 @@ import {
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Box sx={{ backgroundColor: "#000" }}>
         <Navbar />
         <Routes>
@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/search/:searchTerm" exact element={<SearchFeed />} />
         </Routes>
       </Box>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
